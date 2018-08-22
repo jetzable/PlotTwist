@@ -41,4 +41,19 @@ window.getMovies = (key, search) => {
           })
         })
     });
-}
+};
+
+window.filterByType = (search) => {
+  let dbRef = db.collection('movies').orderBy('title', 'asc');
+  dbRef.get()
+  .then(list => {
+    let searchByTypeArray = [];
+    list.forEach(movie => {
+      let movieInfo = movie.data();
+      if(movieInfo.type === search){
+        searchByTypeArray.push(movieInfo);
+      }
+    })
+    drawFilter(searchByTypeArray);
+    });
+};
