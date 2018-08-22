@@ -14,7 +14,7 @@
 
   <!-- Adding styles -->
   <link rel="stylesheet" href="../css/movies.css">
-  <title>PlotTwist Películas</title>
+  <title>PlotTwist</title>
 </head>
 
 <body>
@@ -33,41 +33,41 @@
           <li class="nav-item">
             <a class="nav-link" href="filterMovies.html">Películas</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="games.html">Juegos</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="series.html">Series</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar Juego" aria-label="Search">
-          <button id="searchBtn" class="btn btn-outline my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar serie" aria-label="Search">
+          <button id="searchBtn" class="btn btn-outline my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
   </header>
-</body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12" id="list"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12" id="list"></div>
+    </div>
   </div>
-</div>
-<!-- Adding Bootstrap Scripts -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-  crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-  crossorigin="anonymous"></script>
-<!-- Adding Firebase -->
-<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <!-- Adding Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!-- Adding Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 
-<!-- Adding SweetAlert-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+  <!-- Adding SweetAlert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 
-<!--Adding Scripts -->
-<script src="../js/init.js"></script>
-<script src="../js/filterGames.js"></script>
+  <!--Adding Scripts -->
+  <script src="../js/init.js"></script>
+  <script src="../js/filterSeries.js"></script>
+</body>
 
 </html>

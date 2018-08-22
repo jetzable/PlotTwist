@@ -41,6 +41,7 @@ window.getMovies = (key, search) => {
           })
         })
     });
+    drawSearch(search);
 };
 
 window.filterByType = (search) => {
