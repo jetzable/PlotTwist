@@ -1,0 +1,17 @@
+body,
+html,
+.container-fluid {
+    height: 100vh;
+}
+
+.show-movie {
+    display: inline-block;
+}
+
+.card-img-top {
+    height: 350px;
+}
+
+.card-body {
+    height: 280px;
+}
