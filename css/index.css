@@ -7,17 +7,21 @@
 }
 
 #container-loader{
-    background-color: #072D38;
+    background-color: #505A5B;
+    background-image: url('../assets/images/vintage-old-film.jpg');
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: fixed;    
     transition: all 1s ease;
     z-index: 10000;
 }
 
 #loader{
-    border: 15px solid #A4CBD0;
-    border-top-color: #5D8C92;
+    border: 15px transparent;
+    border-top-color: #fbfcfa;
     border-top-style: groove;
     height: 100px;
     width: 100px;

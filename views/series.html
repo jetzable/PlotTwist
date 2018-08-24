@@ -11,6 +11,8 @@
   <!-- Adding Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
+  <!-- Adding Font -->
+  <link href="https://fonts.googleapis.com/css?family=Mako" rel="stylesheet">
 
   <!-- Adding styles -->
   <link rel="stylesheet" href="../css/movies.css">
@@ -19,16 +21,16 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">PlotTwist</a>
+        <a class="navbar-brand" href="movies.html">PlotTwist</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="movies.html">Home<span class="sr-only"></span></a>
+          <li class="nav-item active">
+            <a class="nav-link" href="movies.html">Inicio<span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="filterMovies.html">Películas</a>
@@ -36,17 +38,23 @@
           <li class="nav-item">
             <a class="nav-link" href="games.html">Juegos</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="series.html">Series</a>
+          </li>
+          <li class="nav-item">
+            <a id="popover-button" class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top"></a>
+          </li>
+          <li class="nav-item">
+            <a id="log-out-btn" class="nav-link">Cerrar Sesión</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar serie" aria-label="Search">
+          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar por Nombre" aria-label="Search">
           <button id="searchBtn" class="btn btn-outline my-2 my-sm-0" type="button"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
-  </header>
+  </header><!--  -->
   <div class="container-fluid">
     <div class="row">
       <div class="col-12" id="list"></div>

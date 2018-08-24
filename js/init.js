@@ -58,3 +58,71 @@ window.filterByType = (search) => {
     drawFilter(searchByTypeArray);
     });
 };
+
+// Google Sign-In //
+window.googleUserLogin = () => {
+  let provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  firebase.auth().useDeviceLanguage();
+  firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      let token = result.credential.accessToken;
+      // The signed-in user info.
+      let user = result.user;
+      location.href = ('views/newsfeed.html');
+      // ...
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      // The email of the user's account used.
+      let email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      let credential = error.credential;
+      if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
+      }
+      // ...
+    });
+};
+
+
+// Facebook sign-in //
+window.facebookUserLogin = () => {
+  let provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().useDeviceLanguage();
+  firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      let token = result.credential.accessToken;
+      // The signed-in user info.
+      let user = result.user;
+      location.href = ('views/newsfeed.html');
+      // ...
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      let errorCode = error.code;
+      let errorMessage = error.message;
+      // The email of the user's account used.
+      let email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      let credential = error.credential;
+      if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
+      }
+    });
+};
+
+// LogOut function //
+window.signOutUser = () => {
+  firebase.auth().signOut()
+    .then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+      console.log(error);
+    });
+};

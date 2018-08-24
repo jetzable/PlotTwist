@@ -2,6 +2,9 @@ body,
 html,
 .container-fluid {
     height: 100vh;
+    font-family: 'Mako', sans-serif;
+    background-color: #5E8F97;
+    padding-top: 2em;
 }
 
 .show-movie {
@@ -14,4 +17,13 @@ html,
 
 .card-body {
     height: 180px;
+}
+
+.navbar,
+.navbar-brand {
+    font-size: 25px;
+}
+
+.card-body {
+    height: auto;
 }

@@ -1,0 +1,30 @@
+body,
+html,
+.row,
+.container-fluid,
+.login-block {
+    height: 100vh;
+    font-family: 'Mako', sans-serif;
+}
+
+img {
+  width: 80%;
+  height: auto;
+}
+.welcome-img {
+  background-image: url('../assets/images/vintage-old-film.jpg');
+  background-size: cover;
+}
+
+.welcome-section {
+    background-color: #5E8F97;
+}
+
+.btn-login {
+  width: 30%;
+  margin-left: 1em;
+}
+
+.login-group {
+  margin-top: 3em;
+}

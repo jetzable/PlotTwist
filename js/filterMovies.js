@@ -7,6 +7,36 @@ const key = 'dc636aee';
 let searchBtn = document.getElementById('searchBtn');
 let listOfMovies = document.getElementById('list');
 
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    user.providerData.forEach((profile) => {
+      $(() => {
+        $('[data-toggle="popover"]').popover({
+          trigger: 'click',
+          placement: 'top',
+          html: true,
+          _content: `<div class="card text-center my-2"><div class="card-header">
+                        <h5 class="card-title">${profile.displayName}</h5></div>
+                        <a><img class="card-img-top user-image my-3" src="${profile.photoURL}"></a><div class="card-body">
+                        <h7 class="card-title"><p class="card-text">${profile.email}</p></h7>
+                        </div></div></div>`,
+          get content() {
+            return this._content;
+          },
+          set content(value) {
+            this._content = value;
+          },
+        });
+      });
+      const profileButton = document.getElementById('popover-button');
+      const printProfileButton = `<i class="fas fa-user-circle"></i>`;
+      profileButton.innerHTML += printProfileButton;
+    });
+  } else {
+    location.href = ('login.html');
+  }
+});
+
 filterByType('movie');
 
 searchBtn.addEventListener('click', event => {
@@ -82,3 +112,10 @@ const drawSearch = (search) => {
       listOfMovies.innerHTML = movieInfo;
     });
 };
+
+document.getElementById('log-out-btn').addEventListener('click', event => {
+  event.preventDefault();
+  signOutUser();
+  alert('¡Hasta Pronto!');
+  location.href = ('login.html');
+});
